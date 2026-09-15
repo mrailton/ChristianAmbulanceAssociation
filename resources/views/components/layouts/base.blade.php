@@ -37,5 +37,7 @@
             <p class="text-sm text-green-100">© {{ date('Y') }} Christian Ambulance Association</p>
         </div>
     </footer>
+
+    <x-auth.logout-modal />
 </body>
 </html>

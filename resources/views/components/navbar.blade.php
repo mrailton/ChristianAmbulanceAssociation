@@ -28,10 +28,13 @@
                 <a href="#contact" @click="open = false" class="transition hover:text-caa-green">Contact</a>
                 @auth()
                     <a href="{{ route('member.dashboard') }}" @click="open = false" class="transition hover:text-caa-green">Dashboard</a>
-                    <form method="post" action="{{ route('logout') }}">
-                        @csrf
-                        <button type="submit" class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-caa-green px-5 py-3 text-center text-white transition hover:bg-caa-forest">Logout</button>
-                    </form>
+                    <button
+                        x-data
+                        @click="$dispatch('open-modal', 'logout-modal')"
+                        type="button"
+                        class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-caa-green px-5 py-3 text-center text-white transition hover:bg-caa-forest">
+                        Logout
+                    </button>
                 @endauth
                 @guest
                     <a href="{{ route('login') }}" class="{inline-flex items-center justify-center whitespace-nowrap rounded-full bg-caa-green px-5 py-3 text-center text-white transition hover:bg-caa-forest">Member login</a>
