@@ -27,6 +27,7 @@
 <div
     x-data="{ visible: true }"
     x-show="visible"
+    x-init="setTimeout(() => visible = false, 3000)"
     x-transition.opacity.duration.200ms
     role="alert"
     {{ $attributes->merge(['class' => "flex items-start gap-3 rounded-2xl border px-4 py-3 shadow-sm {$styles['container']}"]) }}

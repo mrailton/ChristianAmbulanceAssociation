@@ -15,7 +15,7 @@
     </div>
 
     @if (session('success') || session('error') || session('warning') || session('info'))
-        <div class="fixed inset-x-4 bottom-4 z-50 flex flex-col gap-3 sm:left-auto sm:right-6 sm:max-w-md">
+        <div class="fixed inset-x-4 top-4 z-50 flex flex-col gap-3 sm:left-auto sm:right-6 sm:max-w-md">
             @foreach (['success', 'error', 'warning', 'info'] as $type)
                 @if (session($type))
                     <x-flash-message :type="$type" :message="session($type)" />
