@@ -24,7 +24,7 @@
         <div class="flex justify-between items-center">
             <h2 id="modal-{{ $name }}-title" class="text-xl font-bold">{{ $title }}</h2>
 
-            <button @click="show = false">
+            <button @click="show = false" class="cursor-pointer">
                 <x-icons.close />
             </button>
         </div>

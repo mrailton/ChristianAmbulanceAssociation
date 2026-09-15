@@ -32,7 +32,7 @@
                         x-data
                         @click="$dispatch('open-modal', 'logout-modal')"
                         type="button"
-                        class="inline-flex items-center justify-center whitespace-nowrap rounded-full bg-caa-green px-5 py-3 text-center text-white transition hover:bg-caa-forest">
+                        class="cursor-pointer inline-flex items-center justify-center whitespace-nowrap rounded-full bg-caa-green px-5 py-3 text-center text-white transition hover:bg-caa-forest">
                         Logout
                     </button>
                 @endauth
