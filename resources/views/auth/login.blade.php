@@ -37,7 +37,7 @@
                         </div>
 
                         <div class="text-sm/6">
-                            <a href="#" class="font-semibold text-green-600 hover:text-green-500">Forgot password?</a>
+                            <a href="{{ route('forgot-password') }}" class="font-semibold text-green-600 hover:text-green-500">Forgot password?</a>
                         </div>
                     </div>
 
