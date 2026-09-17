@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
@@ -7,7 +9,7 @@ use Illuminate\Http\Request;
 
 class ResetPasswordController extends Controller
 {
-    public function __invoke(Request $request)
+    public function __invoke(Request $request): void
     {
         //
     }
