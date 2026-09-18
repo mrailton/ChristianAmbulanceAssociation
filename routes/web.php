@@ -6,6 +6,7 @@ use App\Http\Controllers\Auth\ForgotPasswordController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\LogoutController;
 use App\Http\Controllers\Auth\ProcessForgotPasswordController;
+use App\Http\Controllers\Auth\ProcessResetPasswordController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\StoreLoginController;
@@ -17,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', IndexController::class)->name('index');
 
 Route::get('/reset-password', ResetPasswordController::class)->name('password.reset');
-Route::post('/reset-password', ResetPasswordController::class)->name('password.store');
+Route::post('/reset-password', ProcessResetPasswordController::class)->name('password.store');
 
 Route::middleware('guest')->group(function (): void {
     Route::get('/login', LoginController::class)->name('login');
