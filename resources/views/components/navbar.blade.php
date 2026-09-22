@@ -22,7 +22,7 @@
 
         <nav id="primary-navigation" class="absolute inset-x-0 top-full border-b border-black/5 bg-white px-6 py-5 shadow-lg lg:static lg:block lg:border-0 lg:bg-transparent lg:p-0 lg:shadow-none" :class="{ 'block': open, 'hidden': !open }">
             <div class="flex flex-col gap-5 text-sm font-semibold uppercase tracking-[0.14em] text-caa-ink lg:flex-row lg:items-center lg:gap-8">
-                <a href="#about" @click="open = false" class="transition hover:text-caa-green">About us</a>
+                <a href="{{ route('about') }}" class="transition hover:text-caa-green">About us</a>
                 <a href="#community" @click="open = false" class="transition hover:text-caa-green">Our community</a>
                 <a href="#support" @click="open = false" class="transition hover:text-caa-green">Support us</a>
                 <a href="#contact" @click="open = false" class="transition hover:text-caa-green">Contact</a>

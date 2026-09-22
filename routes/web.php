@@ -11,11 +11,12 @@ use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\StoreLoginController;
 use App\Http\Controllers\Auth\StoreRegistrationController;
-use App\Http\Controllers\IndexController;
 use App\Http\Controllers\Member\Dashboard;
+use App\Http\Controllers\PublicPagesController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', IndexController::class)->name('index');
+Route::get('/', [PublicPagesController::class, 'index'])->name('index');
+Route::get('/about', [PublicPagesController::class, 'about'])->name('about');
 
 Route::get('/reset-password', ResetPasswordController::class)->name('password.reset');
 Route::post('/reset-password', ProcessResetPasswordController::class)->name('password.store');
